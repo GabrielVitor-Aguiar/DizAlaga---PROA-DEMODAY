@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <header class="logo-container">
+    <div class="logo-container">
       <img src="./imagens/DizAlaga logo.png" alt="Logo" class="logo" />
 
       <nav>
@@ -38,7 +38,7 @@
           ><img src="./imagens/user.png" width="50px" class="user"
         /></a>
       </nav>
-    </header>
+    </div>
     <main class="main">
       <!-- Formulário de postagem -->
       <div class="newPost">
@@ -53,12 +53,14 @@
             placeholder="Escreva aqui"
             id="textarea"
           ></textarea>
+          <input type="file" id="fileInput" accept="image/*" style="display:none">
           <div class="iconsAndButton">
-            <div class="icons">
-              <button class="btnFileForm">
-                <img src="./assets/img.svg" alt="Adicionar uma imagem" />
-              </button>
-            </div>
+
+<div class="icons">
+<button class="btnFileForm" onclick="document.getElementById('fileInput').click()">
+  <img src="./assets/img.svg" alt="Adicionar uma imagem" />
+</button>
+</div>
 
             <button type="submit" id="botao" class="btnSubmitForm">
               Publicar
@@ -79,15 +81,18 @@
     </footer>
 
     <script>
+    
+//esta parte do código JavaScript verifica se o modo escuro está ativado com base no valor armazenado no localStorage. Se estiver ativado, define o fundo da página como preto.
       var isBlack = localStorage.getItem("modoEscuro") === "true";
 
       if (isBlack) {
         document.body.style.backgroundColor = "black";
       }
 
+      //esta função mudarCorDeFundo() é chamada quando o botão de tema é clicado. Ela alterna entre o modo claro e o modo escuro, atualizando a cor de fundo da página. Além disso, ela armazena o estado do modo escuro no localStorage para persistência entre as sessões do usuário.
       function mudarCorDeFundo() {
         if (isBlack) {
-          document.body.style.backgroundColor = "white";
+          document.body.style.backgroundColor = "";
           isBlack = false;
       
         } else {
@@ -104,11 +109,16 @@
           }
         };
       }
+      
     </script>
+
+    <!-- carrega um widget de previsão do tempo assincronamente na página -->
     <script
       async
       src="https://app2.weatherwidget.org/js/?id=ww_92aa553b8005b"
     ></script>
+
+    <!--  carrega um módulo JavaScript (FormPost.js) -->
     <script type="module" src="./Controllers/Form/FormPost.js"></script>
   </body>
 </html>
