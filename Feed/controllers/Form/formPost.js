@@ -34,7 +34,7 @@ export class FormPost {
           <div class="imgUserPost"></div>
 
           <div class="nameAndHour">
-            <strong>Douglas Pujol</strong>
+            <strong>User</strong>
             <p>${time}</p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export class FormPost {
     const time = new Date();
     const hour = time.getHours();
     const minutes = time.getMinutes();
-    return `${hour}h ${minutes}min`;
+    return `${hour}:${minutes}`;
   }
 }
 
