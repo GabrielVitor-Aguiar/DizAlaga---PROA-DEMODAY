@@ -124,10 +124,11 @@ nav > a:hover {
 }
 
 .logo-container{
-  display: flex;
+   display: flex;
   justify-content: space-between;
   align-items: end; /* Isso centraliza verticalmente os itens */
   padding: 0 20px;
+  border-bottom: 1px solid #03D156;
 }
 
 .instagram{
