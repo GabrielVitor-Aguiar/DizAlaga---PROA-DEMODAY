@@ -17,10 +17,11 @@
 
       <nav>
         <!--menu-->
-        <a href=""> Denúncias </a>
+        <a href="/Home/index.html" class="home"> Página Inicial </a>
+        <a href="/Feed/index.html"> Denúncias </a>
         <a href=""> Áreas de risco </a>
-        <a href=""> Pontos de doações </a>
-        <a href=""> Quem somos? </a>
+        <a href="/PontosDoacao/PontosDoacao.html"> Pontos de doações </a>
+        <a href="/QuemSomos/sobre.html"> Quem somos? </a>
 
         <div class="Pesquisar">
           <form>
@@ -40,37 +41,33 @@
       </nav>
     </div>
     <main class="main">
-      <!-- Formulário de postagem -->
-      <div class="newPost">
-        <div class="infoUser">
-          <div class="imgUser"></div>
-          <strong>User</strong>
+
+    <!-- postagem -->
+    <div class="newPost">
+
+      <div class="infoUser">
+        <div class="imgUser">
         </div>
-
-        <form action="" class="formPost" id="formPost">
-          <textarea
-            name="textarea"
-            placeholder="Escreva aqui"
-            id="textarea"
-          ></textarea>
-          <input type="file" id="fileInput" accept="image/*" style="display:none">
-          <div class="iconsAndButton">
-
-<div class="icons">
-<button class="btnFileForm" onclick="document.getElementById('fileInput').click()">
-  <img src="./assets/img.svg" alt="Adicionar uma imagem" />
-</button>
-</div>
-
-            <button type="submit" id="botao" class="btnSubmitForm">
-              Publicar
-            </button>
-          </div>
-        </form>
+        <strong>User</strong>
       </div>
 
-      <ul class="posts" id="posts"></ul>
-    </main>
+      <form action="" class="formPost" id="formPost">
+        <textarea name="textarea" placeholder="Escreva aqui" id="textarea"></textarea>
+        <div class="iconsAndButton">
+          <div class="icons">
+            <button class="btnFileForm">
+              <img src="./assets/img.svg" alt="Adicionar uma imagem">
+            </button>
+          </div>
+
+          <button type="submit" id="botao" class="btnSubmitForm">Publicar</button>
+        </div>
+      </form>
+    </div>
+
+    <ul class="posts" id="posts"></ul>
+
+  </main>
     <footer>
       <a href="https://instagram.com/dizalaga?igshid=OGQ5ZDc2ODk2ZA=="
         ><div class="instagram">
